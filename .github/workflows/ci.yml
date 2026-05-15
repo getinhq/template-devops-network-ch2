@@ -10,3 +10,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: docker compose config
+      - name: TESTING.md must be completed
+        run: '! grep -q "TODO" TESTING.md'
